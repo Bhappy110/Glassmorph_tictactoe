@@ -1,0 +1,120 @@
+*{
+  box-sizing: border-box;
+}
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #1a0a2e 25%, #6a0572 50%, #a855f7 75%, #c084fc 100%);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.square:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.5);
+  z-index: 2;
+}
+
+.board{
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 auto;
+  color : #f6f6f6;
+}
+.square{
+  color : #f6f6f6;
+}
+
+.backgroundBlob1{
+  position: absolute;
+  top: -10rem;
+  right: -10rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.backgroundBlob2{
+  position: absolute;
+  top: 10rem;
+  left: -10rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.3);
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.backgroundBlob3{
+  position: absolute;
+  bottom: 10rem;
+  right: 33%;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: rgba(139, 69, 19, 0.2);
+  filter: blur(60px);
+  z-index: 0;
+}
+.wrapGame{
+  z-index: 1;
+  text-align: center;
+}
+.title{
+  font-size: 50px;
+  color : #f6f6f6;
+}
+.status{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color : #f6f6f6;
+}
+
+.game-info ol li button{
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: white;
+  max-width: 200px;
+  cursor: pointer;
+  margin-top: 10px;
+}
